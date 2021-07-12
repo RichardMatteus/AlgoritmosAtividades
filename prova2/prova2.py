@@ -28,9 +28,10 @@ class Pilha(object):
         return len(self.dados) == 0
  
     def imprimir(self):
-        if self.dados == []:
+        if len(self.dados) == 0:
             print('Pilha vazia.')
-        print(self.dados)
+        else:
+            print(self.dados)
     
 ############################
     
@@ -41,8 +42,6 @@ a3 = Autor('3','Mauricio')
 a1.imprimir()
 a2.imprimir()
 a3.imprimir()
-
-
 
 l1 = Livro('10','Sonho de Verão',a1.nome)
 l2 = Livro('11','Sonho de Primavera',a2.nome)
@@ -63,3 +62,4 @@ pilha.imprimir()
 input()
 pilha.desempilha()
 pilha.imprimir()
+
