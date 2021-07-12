@@ -8,13 +8,13 @@ class Pessoa:
     def imprimeNome(self):
         print(self.nome)
 
-    def __imprimeTelefone(self):
+    def imprimeTelefone(self):
         print(self.__telefone)
 
 
 p1 = Pessoa(1, 'Richard', 'Santana', '3333333')
 p1.imprimeNome()
-p1.__imprimeTelefone()
+p1.imprimeTelefone()
 
 class Fisica(Pessoa):
     def __init__(self, codigo, nome, endereco, telefone, cpf, idade, peso, altura):
@@ -27,13 +27,13 @@ class Fisica(Pessoa):
     def imprimeCPF(self):
         print(self.__cpf)
 
-    def __calculaIMC(self):
+    def calculaIMC(self):
         imc = self.peso/self.altura**2
         print(round(imc, 2))
     
 f1 = Fisica(2, 'Joao', 'POA', '222222', '879879854', 20, 70, 1.74)
 f1.imprimeCPF()
-f1.__calculaIMC()
+f1.calculaIMC()
 
 class Juridica(Pessoa):
     def __init__(self, codigo, nome, endereco, telefone, CNPJ, inscricaoEstadual, quantidadeFuncionarios):        
